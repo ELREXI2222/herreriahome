@@ -20,6 +20,11 @@ body {
     color: #333;
     background-color: #f4f4f9; /* Color de fondo más suave */
    /*  background-color: #f4f4f4; */
+   display: flex;
+    
+   flex-direction: column;
+ align-items: center; 
+
 
 }
 
@@ -317,6 +322,7 @@ footer p {
 
 /* Pie de página */
 footer {
+    width: 100%;
     text-align: center;
     padding: 10px;
     background-color: #333;
@@ -330,9 +336,13 @@ footer {
 @media (min-width: 768px) {
     body {
 
-
+        
         background-color: rgb(255, 255, 255);
 
+    }
+
+    .show-more{
+        font-size: 14px;
     }
 
 

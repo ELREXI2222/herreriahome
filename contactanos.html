@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Bienvenido a la seccion de contactanos de Herreria Tova Servicios, su solución en herrería y carpintería en la Comarca Lagunera. Ofrecemos diseño y fabricación de muebles a medida, puertas, portones, rejas y más. ¡Contáctenos para un presupuesto personalizado!">
+
+    <meta name="keywords" content="herrería, , contactanos, nuestras redes sociales, diseño">
+    <meta name="author" content="Nombre del Autor">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <script type="application/ld+json">
+
+
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Herreria Contactanos",
+          "description": "Herrería y en la Comarca Lagunera. sección de contactanos",
+          "image": "https://tovaservicioslaguna.com/src/portada.jpg",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Emiliano Zapata 36, Ejido la Merced, 27296 Torreón, Coah.",
+            "addressLocality": "Comarca Lagunera",
+            "addressRegion": "Coahuila",
+            "postalCode": "27296",
+            "addressCountry": "MX"
+          },
+          "telephone": "+52-871-363-7366",
+          "priceRange": "$$"
+        }
+        </script>
+
+
+    <title>Contacta con Nosotros - Herreria y carpint</title>
+    <script src="js/main.js" defer></script>
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+
+ 
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-9WLJQEC2NC');
+    </script>
+
+
+
+</head>
+
+
+
+
+
+<body>
+    <!-- Encabezado del sitio -->
+    <!-- Encabezado del sitio -->
+    <div class="header"></div>
+
+    <!-- Logica para cargar el carrusel -->
+    <script>
+
+        // Realiza la solicitud para obtener el contenido de 'header.html'
+        fetch('header.html')
+            .then(response => response.text())  // Convierte la respuesta en texto (contenido HTML)
+            .then(data => {
+                // Inserta el contenido dentro del <div> con la clase 'header'
+                document.querySelector('.header').innerHTML = data;
+
+                // Selecciona el enlace de "Inicio" usando su ID
+                const inicioLink = document.getElementById('inicio-nav');
+
+                // Cambia el color del enlace a amarillo y lo pone en negrita
+                if (inicioLink) {
+                    inicioLink.style.color = "#1a9c74";
+                    inicioLink.style.fontWeight = "bold"; // Añade negrita para mayor énfasis
+                }
+            });
+
+    </script>
+
+    <!-- Sección principal -->
+    <main>
+
+        </div>
+
+
+
+        <section id="horario">
+            <h3>Horario de Atención</h3>
+            <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+            <p>Sábado: 9:00 AM - 2:00 PM</p>
+            <p class="cerrado">Domingo: Cerrado</p>
+        </section>
+
+
+        <style>
+            /* Estilos generales para la sección de horario */
+            #horario {
+                background-color: #f9f9f9;
+                /* Fondo gris claro para resaltar la sección */
+                border: 1px solid #ddd;
+                /* Borde suave alrededor de la sección */
+                border-radius: 8px;
+                /* Bordes redondeados */
+                padding: 20px;
+                /* Espacio interior */
+                margin: 20px auto;
+                /* Margen automático para centrar la sección */
+                max-width: 500px;
+                /* Ancho máximo de la sección */
+                text-align: center;
+                /* Centrar el texto */
+
+
+                /* Añadir sombra */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                /* Sombra sutil */
+            }
+
+            /* Estilos para el encabezado de la sección */
+            #horario h3 {
+                font-size: 1.5em;
+                /* Tamaño de fuente más grande para el encabezado */
+                color: #333;
+                /* Color gris oscuro para el texto */
+                margin-bottom: 10px;
+                /* Espacio inferior para separar del contenido */
+            }
+
+            /* Estilos para los párrafos de horarios */
+            #horario p {
+                font-size: 1.2em;
+                /* Tamaño de fuente para los párrafos */
+                color: #555;
+                /* Color gris medio para el texto */
+                margin: 5px 0;
+                /* Espacio arriba y abajo de los párrafos */
+            }
+
+            /* Estilo para el párrafo que indica el día cerrado */
+            #horario .cerrado {
+                color: #a52a2a;
+                /* Color marrón para indicar cerrado */
+                font-weight: bold;
+                /* Fuente en negrita para destacar */
+            }
+        </style>
+
+
+
+
+        <section id="section-contacto">
+
+            <h2>Contáctanos</h2>
+
+            <a href="https://wa.me/528713637366" class="whatsapp-button">
+                <img src="images/iconos/logowats.png" alt="WhatsApp Logo" class="whatsapp-logo">
+                Contáctanos por WhatsApp
+            </a>
+
+            <a href="mailto:tova.servicios@hotmail.com" class="correo-button">
+                <img src="images/iconos/logo correo electronico.png" alt="Correo Logo" class="correo-logo">
+                Envianos un Correo electronico
+            </a>
+
+            <p style="display: flex; align-items: center; margin: 2%; font-size: 1.02rem;">
+                tova.servicios@hotmail.com
+                <button class="copiar-button" onclick="copiarAlPortapapeles()" style="margin-left: 10px;">Copiar
+                    portapapeles</button>
+            </p>
+
+            <div id="mensaje-copiado" class="mensaje-copiado">¡Correo copiado!</div>
+
+            <script>
+
+                function copiarAlPortapapeles() {
+                    const correo = "tova.servicios@hotmail.com";
+                    navigator.clipboard.writeText(correo).then(() => {
+                        mostrarMensajeCopiado();
+                    }).catch(err => {
+                        alert("Error al copiar el correo: " + err);
+                    });
+                }
+
+                function mostrarMensajeCopiado() {
+                    const mensaje = document.getElementById("mensaje-copiado");
+                    mensaje.classList.add("show");
+
+                    // Ocultar el mensaje después de 2 segundos
+                    setTimeout(() => {
+                        mensaje.classList.remove("show");
+                    }, 2000);
+                }
+
+            </script>
+
+            <style>
+                .whatsapp-button,
+                .correo-button {
+                    display: inline-block;
+                    text-align: center;
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    color: white;
+                    background-color: #25D366;
+                    /* WhatsApp verde */
+                    border: none;
+                    border-radius: 5px;
+                    width: 100%;
+                    /* Para que ambos botones ocupen el mismo ancho */
+                    max-width: 300px;
+                    /* Puedes ajustar el máximo */
+                    margin: 10px 0;
+                }
+
+                .correo-button {
+                    background-color: #0073e6;
+                    /* Color del correo */
+                }
+
+                .whatsapp-logo,
+                .correo-logo {
+                    width: 20px;
+                    margin-right: 10px;
+                    vertical-align: middle;
+                }
+
+                #section-contacto {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+
+
+
+                .mensaje-copiado {
+                    opacity: 0;
+                    visibility: hidden;
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 10px;
+                    border-radius: 5px;
+                    position: fixed;
+                    top: 40%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    transition: opacity 0.5s ease, visibility 0.5s ease;
+                }
+
+                .mensaje-copiado.show {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            </style>
+
+        </section>
+
+
+
+        <section id="redes-sociales">
+            <h3>Síguenos en nuestras redes sociales</h3>
+            <a href="https://www.facebook.com/tavaserv/" target="_blank">
+                <img src="src/icono facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/tuPagina" target="_blank">
+                <img src="src/icono instagram.png" alt="Instagram">
+            </a>
+
+            <style>
+                #horario,
+                #redes-sociales {
+
+                    margin: 20px 0;
+                    width: 100%;
+                    max-width: 1200px;
+                    text-align: center;
+                    background-color: #f9f9f9;
+
+                }
+
+                #section-contacto {
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                }
+
+                #redes-sociales {
+                    text-align: center;
+                }
+            </style>
+        </section>
+
+
+
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer id="hola">
+        <p>&copy; 2024 Herrería y Carpintería. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Enlace al archivo JS -->
+    <script src="scripts/main.js"></script>
+
+    <script>
+        let currentIndex = 0;
+
+        function moveSlide(direction) {
+            const gallery = document.querySelector('.gallery');
+            const totalImages = document.querySelectorAll('.gallery img').length;
+            currentIndex = (currentIndex + direction + totalImages) % totalImages;
+            const offset = -currentIndex * 100; // Moverse en porcentaje
+            gallery.style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var header = document.querySelector('.header');
+
+            window.onscroll = function () {
+                if (window.pageYOffset > 50) { // Ajusta el valor según sea necesario
+                    header.classList.add("scrolled");
+                } else {
+                    header.classList.remove("scrolled");
+                }
+            };
+        });
+    </script>
+
+
+    <style>
+        #horario p {
+            font-family: 'Roboto', sans-serif;
+
+            /* Ajusta el tamaño del texto según sea necesario */
+            color: #333333;
+            /* Cambia el color del texto */
+            line-height: 1.5;
+            /* Espacio entre líneas */
+            margin-bottom: 10px;
+            /* Espacio inferior entre párrafos */
+        }
+
+
+        #redes-sociales img {
+
+            width: 50px;
+            /* Define el ancho deseado */
+            height: 50px;
+            /* Define la altura deseada */
+            object-fit: cover;
+            /* Ajusta la imagen para que se mantenga dentro del contenedor sin deformarse */
+            margin-right: 10px;
+            /* Añade un pequeño margen entre las imágenes */
+            transition: transform 0.3s ease;
+            /* Transición suave para animaciones */
+
+
+        }
+
+        #redes-sociales img:hover {
+            transform: scale(1.1);
+            /* Efecto de zoom al pasar el cursor */
+        }
+    </style>
+
+
+
+
+</body>
+
+</html>
