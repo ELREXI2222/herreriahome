@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrusel de Imágenes</title>
+  <link rel="stylesheet" href="/css/carrusel.css">
+  <style>
+    
+  </style>
+</head>
+<body>
+
+
+
+   <!-- BUG hacer que simpre tenga un aspecot 1:1 --> 
+  <div class="carousel-container">
+    <link rel="stylesheet" href="/css/carrusel.css">
+    <div class="carousel-images">
+      <!-- Imágenes se generarán dinámicamente -->
+    </div>
+    <button class="arrow arrow-left">&lt;</button>
+    <button class="arrow arrow-right">&gt;</button>
+    <div class="indicators">
+      <!-- Indicadores se generarán dinámicamente -->
+    </div>
+    <script>
+
+        let ima = "https://cdn.pixabay.com/photo/2016/02/10/21/59/landscape-1192669_1280.jpg";
+        let ima2 = "data:image/jpeg;base64,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";
+        let ima3 = "https://media.istockphoto.com/id/517188688/es/foto/paisaje-de-monta%C3%B1a.jpg?s=612x612&w=0&k=20&c=EnSd5sJdxih_svZHscQ5Hfzr3RSOdXO9MpdmKK4CMTs=";
+        
+        
+        
+        const images = [
+          ima, // Usamos la variable directamente
+          ima2,
+          ima3
+        ];
+        
+            const carouselImages = document.querySelector('.carousel-images');
+            const indicatorsContainer = document.querySelector('.indicators');
+            let currentIndex = 0;
+        
+            // Cargar imágenes dinámicamente
+            function loadImages() {
+              images.forEach((image, index) => {
+                const img = document.createElement('img');
+                img.src = image;
+                carouselImages.appendChild(img);
+        
+                // Crear indicadores
+                const indicator = document.createElement('div');
+                indicator.classList.add('indicator');
+                if (index === 0) indicator.classList.add('active');
+                indicator.addEventListener('click', () => goToImage(index));
+                indicatorsContainer.appendChild(indicator);
+              });
+            }
+        
+            // Cambiar imagen
+            function updateCarousel() {
+              const width = carouselImages.clientWidth;
+              carouselImages.style.transform = `translateX(-${currentIndex * width}px)`;
+              updateIndicators();
+            }
+        
+            // Actualizar indicadores
+            function updateIndicators() {
+              const indicators = document.querySelectorAll('.indicator');
+              indicators.forEach((indicator, index) => {
+                if (index === currentIndex) {
+                  indicator.classList.add('active');
+                } else {
+                  indicator.classList.remove('active');
+                }
+              });
+            }
+        
+            // Ir a la siguiente imagen
+            function nextImage() {
+              currentIndex = (currentIndex + 1) % images.length;
+              updateCarousel();
+            }
+        
+            // Ir a la imagen anterior
+            function prevImage() {
+              currentIndex = (currentIndex - 1 + images.length) % images.length;
+              updateCarousel();
+            }
+        
+            // Ir a una imagen específica
+            function goToImage(index) {
+              currentIndex = index;
+              updateCarousel();
+            }
+        
+            // Soporte para gestos táctiles
+            let startX = 0;
+            carouselImages.addEventListener('touchstart', (e) => {
+              startX = e.touches[0].clientX;
+            });
+        
+            carouselImages.addEventListener('touchend', (e) => {
+              const endX = e.changedTouches[0].clientX;
+              if (startX > endX + 50) {
+                nextImage();
+              } else if (startX < endX - 50) {
+                prevImage();
+              }
+            });
+        
+            // Listeners para flechas
+            document.querySelector('.arrow-right').addEventListener('click', nextImage);
+            document.querySelector('.arrow-left').addEventListener('click', prevImage);
+        
+            // Inicializar
+            loadImages();
+          </script>
+
+
+  </div>
+
+
+</body>
+</html>

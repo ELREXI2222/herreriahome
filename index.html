@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-    content="Herrería residencial  en la Comarca Lagunera. Ofrecemos diseño y fabricación de muebles a medida, instalación de estructuras metálicas y más. ¡Contáctanos para un presupuesto personalizado!">
+        content="Herrería residencial  en la Comarca Lagunera. Ofrecemos diseño y fabricación de muebles a medida, instalación de estructuras metálicas y más. ¡Contáctanos para un presupuesto personalizado!">
     <title>Herrería en Torreon y toda la Laguna</title>
     <meta name="author" content="Tova Servicios Laguna">
 
-        <!-- Favicon -->
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
-        <script type="application/ld+json">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script type="application/ld+json">
             {
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
@@ -35,23 +36,168 @@
         
         </script>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/css/carrusel.css">
 
-        <!-- Tareggets para mejorar visualización en Redes sociales  -->
-        <meta property="og:title" content="Herrería en Torreon y toda la Laguna">
-        <meta property="og:description" content="Herrería residencial en la Comarca Lagunera. Ofrecemos diseño y fabricación de muebles a medida, instalación de estructuras metálicas y más.">
-        <meta property="og:image" content="https://tovaservicioslaguna.com/src/portada.jpg">
-        <meta property="og:url" content="https://herreria.tovaservicioslaguna.com">
-        <meta property="og:type" content="website">
-        <!-- Tareggets para mejorar visualización en Redes sociales  -->
 
-        
+    <!-- Tareggets para mejorar visualización en Redes sociales  -->
+    <meta property="og:title" content="Herrería en Torreon y toda la Laguna">
+    <meta property="og:description"
+        content="Herrería residencial en la Comarca Lagunera. Ofrecemos diseño y fabricación de muebles a medida, instalación de estructuras metálicas y más.">
+    <meta property="og:image" content="https://tovaservicioslaguna.com/src/portada.jpg">
+    <meta property="og:url" content="https://herreria.tovaservicioslaguna.com">
+    <meta property="og:type" content="website">
+    <!-- Tareggets para mejorar visualización en Redes sociales  -->
+
+     <!-- estilos para el contenedor de texto  -->
+     <style>
+        /* Estilo para el contenedor del texto */
+        .text-container {
+            border: 1px solid #ddd; /* Borde sutil */
+            border-radius: 8px;     /* Borde redondeado */
+            padding: 15px;          /* Espaciado interno */
+            background-color: #f9f9f9; /* Color de fondo sutil */
+            max-width: 600px;       /* Ancho máximo */
+            margin: 20px 0;         /* Espacio entre elementos */
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Estilo para el texto truncado */
+        .text-container p {
+            margin: 0;
+            max-height: 80px; /* Altura máxima antes de truncar */
+            overflow: hidden;
+            transition: max-height 0.5s ease; /* Transición suave */
+        }
+
+        /* Al hacer clic en 'Ver más', el texto se expande */
+        .text-container.expanded p {
+            max-height: 1000px; /* Altura grande para mostrar el contenido completo */
+        }
+
+        /* Botón 'Ver más...' */
+        .show-more {
+            font-size: 4vw;
+            cursor: pointer;
+            color: #585d62;
+            display: block;
+            text-align: right;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .show-more:hover {
+            text-decoration: underline;
+        }
+    </style>       
 
 
 </head>
+
 <body>
-    <h1>Bienvenido a la página de Herrería Home</h1>
-    <p>Estamos trabajando en el contenido del sitio.</p>
+
+    <!-- Encabezado del sitio -->
+    <div class="header"></div>
+
+    <!-- Logica para cargar el carrusel -->
+    <script>
+
+        // Realiza la solicitud para obtener el contenido de 'header.html'
+        fetch('header.html')
+            .then(response => response.text())  // Convierte la respuesta en texto (contenido HTML)
+            .then(data => {
+                // Inserta el contenido dentro del <div> con la clase 'header'
+                document.querySelector('.header').innerHTML = data;
+
+                // Selecciona el enlace de "Inicio" usando su ID
+                const inicioLink = document.getElementById('inicio-nav');
+
+                // Cambia el color del enlace a amarillo y lo pone en negrita
+                if (inicioLink) {
+                    inicioLink.style.color = "#1a9c74";
+                    inicioLink.style.fontWeight = "bold"; // Añade negrita para mayor énfasis
+                }
+            });
+
+    </script>
+
+
+
+
+    <main>
+        <h1>Herrería en Torreón <br> Diseño y Calidad</h1>
+
+         <!-- Contenedor del texto con la funcionalidad 'Ver más...' -->
+        <div class="text-container" id="text-container">
+            <p>En nuestra herrería en la Comarca Lagunera, ofrecemos soluciones a medida para proyectos residenciales
+            e industriales. Nos especializamos en puertas, portones, rejas, estructuras metálicas y mobiliario
+            personalizado. Con un enfoque en la calidad y el diseño, brindamos resultados que combinan
+            seguridad y estilo. Contáctanos para un presupuesto sin compromiso.</p>
+
+            <!-- Botón 'Ver más...' -->
+            <span class="show-more" id="show-more">Ver más...</span>
+        </div>
+        <!-- BUG hacer que simpre tenga un aspecot 1:1 -->
+        <!-- carousel-container -->
+        <div class="carousel-container">
+
+            <div class="carousel-images">
+                <!-- Imágenes se generarán dinámicamente -->
+            </div>
+            <button class="arrow arrow-left">&lt;</button>
+            <button class="arrow arrow-right">&gt;</button>
+            <div class="indicators">
+                <!-- Indicadores se generarán dinámicamente -->
+            </div>
+
+        </div>
+    </main>
+
+
+    <!-- Pie de página -->
+    <footer id="hola">
+        <p>&copy; 2024 Herrería y Carpintería. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- script para el boton ver mas... -->
+    <script>
+        // Obtener los elementos
+        const textContainer = document.getElementById('text-container');
+        const showMoreButton = document.getElementById('show-more');
+
+        // Alternar entre mostrar más o menos texto
+        showMoreButton.addEventListener('click', function() {
+            textContainer.classList.toggle('expanded');
+
+            // Cambiar el texto del botón entre 'Ver más...' y 'Ver menos...'
+            if (textContainer.classList.contains('expanded')) {
+                showMoreButton.textContent = '...Ver menos';
+            } else {
+                showMoreButton.textContent = 'Ver más...';
+            }
+        });
+    </script>
+
+    <!-- escript para econder un 50% el header -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var header = document.querySelector('.header');
+            var headerContent = document.querySelector('.header-content');
+
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 50) { // Ajusta el valor según sea necesario
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        });
+
+    </script>
+
     <script src="js/scripts.js" defer></script>
 
+
 </body>
+
 </html>
