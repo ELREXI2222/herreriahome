@@ -1,0 +1,92 @@
+/* Botones de WhatsApp y Correo */
+.whatsapp-button,
+.correo-button {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+    animation: colorTransition 5s ease-in-out infinite;
+    /* La animación durará 5 segundos y será continua (infinita) */
+}
+
+/* WhatsApp verde */
+.whatsapp-button {
+    background-color: #25D366;
+}
+
+/* Correo azul */
+.correo-button {
+    background-color: #0073e6;
+}
+
+/* Iconos */
+.whatsapp-logo,
+.correo-logo {
+    width: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Contenedor de la sección contacto */
+#section-contacto {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Mensaje copiado */
+.mensaje-copiado {
+    opacity: 0;
+    visibility: hidden;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.mensaje-copiado.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Animación de transición de color */
+@keyframes colorTransition {
+    0% {
+        background-color: #25D366; /* Color inicial (verde de WhatsApp) */
+    }
+    50% {
+        background-color: #083613; /* Otro tono de verde */
+    }
+    100% {
+        background-color: #25D366; /* Volver al color original */
+    }
+}
+
+/* Para el botón de correo */
+.correo-button {
+    animation: correoColorTransition 5s ease-in-out infinite;
+}
+
+@keyframes correoColorTransition {
+    0% {
+        background-color: #0073e6; /* Color inicial (azul del correo) */
+    }
+    50% {
+        background-color: #021b35; /* Otro tono de azul */
+    }
+    100% {
+        background-color: #0073e6; /* Volver al color original */
+    }
+}

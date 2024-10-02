@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Herrería residencial  en la Comarca Lagunera. Ofrecemos diseño y fabricación de muebles a medida, instalación de estructuras metálicas y más. ¡Contáctanos para un presupuesto personalizado!">
+   
+    <meta name="keywords" content="herrería en Torreón, portones automáticos, estructuras metálicas, diseño de barandales, fabricación de puertas de hierro, herrería residencial, herrería industrial, escaleras metálicas, servicios de herrería en Gómez Palacio, pergolas de metal, portones eléctricos, reparación de herrería, herrería a medida, soldadura, forja artística, techumbres metálicas, decoración de herrería, protección de ventanas, muebles de metal, Comarca Lagunera">
+
     <title>Herrería en Torreon y toda la Laguna</title>
     <meta name="author" content="Tova Servicios Laguna">
 
@@ -37,6 +40,8 @@
         </script>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="/css/carrusel.css">
+    <link rel="stylesheet" href="/css/section-contacto.css">
+
 
 
     <!-- Tareggets para mejorar visualización en Redes sociales  -->
@@ -137,7 +142,7 @@
             <!-- Botón 'Ver más...' -->
             <span class="show-more" id="show-more">Ver más...</span>
         </div>
-        <!-- BUG hacer que simpre tenga un aspecot 1:1 -->
+       
         <!-- carousel-container -->
         <div class="carousel-container">
 
@@ -151,12 +156,64 @@
             </div>
 
         </div>
+
+        <hr />
+
+        <section id="section-contacto">
+
+            <h2>Contáctanos</h2>
+
+            <a href="https://wa.me/528713637366" class="whatsapp-button">
+                <img src="images/iconos/logowats.png" alt="WhatsApp Logo" class="whatsapp-logo">
+                Contáctanos por WhatsApp
+            </a>
+
+            <a href="mailto:tova.servicios@hotmail.com" class="correo-button">
+                <img src="images/iconos/logo correo electronico.png" alt="Correo Logo" class="correo-logo">
+                Envianos un Correo electronico
+            </a>
+
+            <p style="display: flex; align-items: center; margin: 2%; font-size: 1.02rem;">
+                tova.servicios@hotmail.com
+                <button class="copiar-button" onclick="copiarAlPortapapeles()" style="margin-left: 10px;">Copiar
+                    portapapeles</button>
+            </p>
+
+            <div id="mensaje-copiado" class="mensaje-copiado">¡Correo copiado!</div>
+
+            <script>
+
+                function copiarAlPortapapeles() {
+                    const correo = "tova.servicios@hotmail.com";
+                    navigator.clipboard.writeText(correo).then(() => {
+                        mostrarMensajeCopiado();
+                    }).catch(err => {
+                        alert("Error al copiar el correo: " + err);
+                    });
+                }
+
+                function mostrarMensajeCopiado() {
+                    const mensaje = document.getElementById("mensaje-copiado");
+                    mensaje.classList.add("show");
+
+                    // Ocultar el mensaje después de 2 segundos
+                    setTimeout(() => {
+                        mensaje.classList.remove("show");
+                    }, 2000);
+                }
+
+            </script>
+
+           
+
+        </section>
+
     </main>
 
 
     <!-- Pie de página -->
     <footer id="hola">
-        <p>&copy; 2024 Herrería y Carpintería. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Herrería. Todos los derechos reservados.</p>
     </footer>
 
     <!-- script para el boton ver mas... -->
@@ -178,7 +235,7 @@
         });
     </script>
 
-    <!-- escript para econder un 50% el header -->
+    <!-- escript para esconder un 50% el header -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var header = document.querySelector('.header');
