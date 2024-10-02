@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Herrería residencial  en la Comarca Lagunera. Ofrecemos diseño y fabricación de muebles a medida, instalación de estructuras metálicas y más. ¡Contáctanos para un presupuesto personalizado!">
-   
-    <meta name="keywords" content="herrería en Torreón, portones automáticos, estructuras metálicas, diseño de barandales, fabricación de puertas de hierro, herrería residencial, herrería industrial, escaleras metálicas, servicios de herrería en Gómez Palacio, pergolas de metal, portones eléctricos, reparación de herrería, herrería a medida, soldadura, forja artística, techumbres metálicas, decoración de herrería, protección de ventanas, muebles de metal, Comarca Lagunera">
+
+    <meta name="keywords"
+        content="herrería en Torreón, portones automáticos, estructuras metálicas, diseño de barandales, fabricación de puertas de hierro, herrería residencial, herrería industrial, escaleras metálicas, servicios de herrería en Gómez Palacio, pergolas de metal, portones eléctricos, reparación de herrería, herrería a medida, soldadura, forja artística, techumbres metálicas, decoración de herrería, protección de ventanas, muebles de metal, Comarca Lagunera">
 
     <title>Herrería en Torreon y toda la Laguna</title>
     <meta name="author" content="Tova Servicios Laguna">
@@ -53,16 +54,23 @@
     <meta property="og:type" content="website">
     <!-- Tareggets para mejorar visualización en Redes sociales  -->
 
-     <!-- estilos para el contenedor de texto  -->
-     <style>
+    <!-- estilos para el contenedor de texto  -->
+    <style>
         /* Estilo para el contenedor del texto */
         .text-container {
-            border: 1px solid #ddd; /* Borde sutil */
-            border-radius: 8px;     /* Borde redondeado */
-            padding: 15px;          /* Espaciado interno */
-            background-color: #f9f9f9; /* Color de fondo sutil */
-            max-width: 600px;       /* Ancho máximo */
-            margin: 20px 0;         /* Espacio entre elementos */
+            text-align: center;
+            border: 1px solid #ddd;
+            /* Borde sutil */
+            border-radius: 8px;
+            /* Borde redondeado */
+            padding: 15px;
+            /* Espaciado interno */
+            background-color: #f9f9f9;
+            /* Color de fondo sutil */
+            max-width: 700px;
+            /* Ancho máximo */
+            margin: 20px 0;
+            /* Espacio entre elementos */
             position: relative;
             overflow: hidden;
         }
@@ -70,14 +78,30 @@
         /* Estilo para el texto truncado */
         .text-container p {
             margin: 0;
-            max-height: 80px; /* Altura máxima antes de truncar */
+            max-height: 80px;
+            /* Altura máxima antes de truncar */
             overflow: hidden;
-            transition: max-height 0.5s ease; /* Transición suave */
+            transition: max-height 0.5s ease;
+            /* Transición suave */
+        }
+
+        .text-container u {
+            text-decoration: underline;
+            text-decoration-color: #333;
+            /* Color del subrayado */
+            text-decoration-thickness: 2px;
+            /* Grosor del subrayado */
+        }
+
+        .text-container strong {
+            color: #3c7b94;
+            /* Azul claro */
         }
 
         /* Al hacer clic en 'Ver más', el texto se expande */
         .text-container.expanded p {
-            max-height: 1000px; /* Altura grande para mostrar el contenido completo */
+            max-height: 1000px;
+            /* Altura grande para mostrar el contenido completo */
         }
 
         /* Botón 'Ver más...' */
@@ -94,7 +118,7 @@
         .show-more:hover {
             text-decoration: underline;
         }
-    </style>       
+    </style>
 
 
 </head>
@@ -130,19 +154,24 @@
 
 
     <main>
-        <h1>Herrería en Torreón <br> Diseño y Calidad</h1>
+        <h1>Herrería en Torreón</h1>
+        <h2>Diseño y Calidad en cada proyecto</h2>
 
-         <!-- Contenedor del texto con la funcionalidad 'Ver más...' -->
+
+        <!-- Contenedor del texto con la funcionalidad 'Ver más...' -->
         <div class="text-container" id="text-container">
-            <p>En nuestra herrería en la Comarca Lagunera, ofrecemos soluciones a medida para proyectos residenciales
-            e industriales. Nos especializamos en puertas, portones, rejas, estructuras metálicas y mobiliario
-            personalizado. Con un enfoque en la calidad y el diseño, brindamos resultados que combinan
-            seguridad y estilo. Contáctanos para un presupuesto sin compromiso.</p>
+            <p> <strong>E</strong>n nuestra herrería en la Comarca Lagunera, ofrecemos soluciones a medida para proyectos
+              <strong>residenciales</strong>  
+                e <u>industriales</u>. Nos especializamos en <u>puertas</u>, <u>portones</u>, <u>rejas</u>, estructuras
+                metálicas y mobiliario
+                personalizado. Con un enfoque en la <u>calidad</u> y el <u>diseño</u>, brindamos resultados que combinan
+                seguridad y estilo. Contáctanos para un presupuesto sin compromiso.
+            </p>
 
             <!-- Botón 'Ver más...' -->
             <span class="show-more" id="show-more">Ver más...</span>
         </div>
-       
+
         <!-- carousel-container -->
         <div class="carousel-container">
 
@@ -204,7 +233,7 @@
 
             </script>
 
-           
+
 
         </section>
 
@@ -213,7 +242,10 @@
 
     <!-- Pie de página -->
     <footer id="hola">
-        <p>&copy; 2024 Herrería. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Herrería Tova Servicios de la Comarca Lagunera.
+            <br>
+            Todos los derechos reservados.
+        </p>
     </footer>
 
     <!-- script para el boton ver mas... -->
@@ -223,7 +255,7 @@
         const showMoreButton = document.getElementById('show-more');
 
         // Alternar entre mostrar más o menos texto
-        showMoreButton.addEventListener('click', function() {
+        showMoreButton.addEventListener('click', function () {
             textContainer.classList.toggle('expanded');
 
             // Cambiar el texto del botón entre 'Ver más...' y 'Ver menos...'

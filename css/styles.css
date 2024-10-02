@@ -26,7 +26,7 @@ body {
 li a {}
 
 
-h1, p{
+h1,h2,h3, p{
     margin-left: 2%;
     margin-right: 2%;
   }
@@ -172,7 +172,7 @@ section {
     margin-bottom: 40px;
 }
 
-h1 {
+h1,h2 {
 
     text-align: center;
     font-size: 7vw;
@@ -395,11 +395,11 @@ footer {
    
     /* Estilo para los enlaces de navegación */
     .nav-list a {
-        margin-left: 5px;
+        margin-left: 0px;
         text-decoration: none;
         color: #ffffff;
         /* Ajusta el color del texto según tu diseño */
-        font-size: 15px;
+        font-size: 11px;
         /* Ajusta el tamaño del texto según tu necesidad */
         transition: color 0.3s ease;
         /* Añade una transición suave al cambio de color */
